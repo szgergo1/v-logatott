@@ -11,15 +11,15 @@
 <body>
 
     <div class="topnav" id="myTopnav">
-       <a href="javascript:void(0);" class="active" onclick="showContent('players')">Játékosok</a>
-        <a href="javascript:void(0);" onclick="showContent('Meccsek')">Meccsek</a>
-        <a href="javascript:void(0);" onclick="showContent('Statisztikák')">Statisztikák</a>
+       <a href="javascript:void(0);" class="active" onclick="showContent('Játékosok')" id="nav-Játékosok">Játékosok</a>
+        <a href="javascript:void(0);" onclick="showContent('Meccsek')" id="nav-Meccsek">Meccsek</a>
+        <a href="javascript:void(0);" onclick="showContent('Statisztikák')" id="nav-Statisztikák">Statisztikák</a>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
             <i class="fa fa-bars"></i>
         </a>
     </div>
 
-    <div id="players" class="content active">
+    <div id="Játékosok" class="content active">
 
         <div>
             <h1 id="cim">Csapat</h1>
@@ -62,8 +62,8 @@
                 <img src="képek/Játékosok/bolla.png" alt="Bolla Bendegúz" title="Bolla Bendegúz" id="bolla" class="jatekos">
                 <img src="képek/Játékosok/vecsei.png" alt="Vécsei Bálint" title="Vécsei Bálint" id="vecsei" class="jatekos">
                 <img src="képek/Játékosok/dardaibence.png" alt="Dárdai Bence" title="Dárdai Bence" id="dardaibence" class="jatekos">
-                <img src="képek/Játékosok/kerkez.png" alt="Kerkez Milos" title="Kerkez Milos" id="kerkez" class="jatekos">
-                <img src="képek/Játékosok/szoboszlai.png" alt="Szoboszlai Dominik" title="Szoboszlai Dominik" id="szoboszlai" class="jatekos">
+                <img src="képek/Játékosok/kerkez.png" alt="Kerkez Milos" title="Kerkez Milos" id="kerkez" class="jatekos">                
+                <a href="#szoboszlaidominik" onclick="showStatsBeforeJump(event)"><img src="képek/Játékosok/szoboszlai.png" alt="Szoboszlai Dominik" title="Szoboszlai Dominik" id="szoboszlai" class="jatekos"></a>
                 <img src="képek/Játékosok/gazdag.png" alt="Gazdag Dániel" title="Gazdag Dániel" id="gazdag" class="jatekos">
                 <img src="képek/Játékosok/varga.png" alt="Varga Barnabás" title="Varga Barnabás" id="varga" class="jatekos">
                 <img src="képek/Játékosok/orban.png" alt="Willi Orban" title="Willi Orban" id="orban" class="jatekos">
@@ -132,19 +132,304 @@
                       </div>
                     </div>
                   </div>                                    
-              </div>          
-                  
+              </div>     
+            </div>
+        </div>
     </div>
 
     <div id="Meccsek" class="content">
-        
+        <h1 id="cim">Meccsek</h1>
+        <p>Itt jelennek meg a Meccsek a játékosok eredményeiről.</p>
     </div>
     
     <div id="Statisztikák" class="content">
+      <h1 id="cim">Statisztikák</h1>
 
+      <div class="adatok-container">
+        <div class="adatok">
+          <h3>Marco Rossi</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+
+        </div>
+        <div class="adatok">
+          <h3>Cosimo Inguscio</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+
+        </div>
+        <div class="adatok">
+          <h3>Szalai Ádám</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Kövesfalvi István</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Dibusz Dénes</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Dárdai Márton</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Fiola Attila</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Bolla Bendegúz</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+                    
+        </div>
+        <div class="adatok">
+          <h3>Vécsei Bálint</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Dárdai Bence</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Kerkez Milos</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3 id="szoboszlaidominik">Szoboszlai Dominik</h3>
+          <p><b>Válogatottság:</b> 53</p>
+          <p><b>Pozíció:</b> Középpálya</p>
+          <p><b>Gólok:</b> 15</p>
+          <p><b>Játékperc:</b> 4405 perc</p>
+          <p><b>Jelenlegi csapata:</b> Liverpool</p>
+          <p><b>Extra:</b> Válogatott csapatkapitánya</p>
+        </div>
+        <div class="adatok">
+          <h3>Gazdag Dániel</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Varga Barnabás</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Willi Orban</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Gulácsi Péter</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+
+        </div>
+        <div class="adatok">
+          <h3>Hegyi Krisztián</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+
+        </div>
+        <div class="adatok">
+          <h3>Szappanos Péter</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Balogh Botond</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Botka Endre</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Csoboth Kevin</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Nagy Zsolt</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Nikitscher Tamás</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+                    
+        </div>
+        <div class="adatok">
+          <h3>Osvath Attila</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>
+          
+        </div>
+        <div class="adatok">
+          <h3>Sallai Roland</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Schafer András</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Szabo Levente</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Szalai Attila</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>          
+        </div>
+        <div class="adatok">
+          <h3>Tóth Alex</h3>
+          <p><b>Válogatottság:</b></p>
+          <p><b>Pozíció:</b></p>
+          <p><b>Gólok:</b></p>
+          <p><b>Játékperc:</b></p>
+          <p><b>Jelenlegi csapata:</b></p>
+          <p><b>Extra:</b></p>   
+      </div>
     </div>
     
-    <script src="js.js"></script>
+    
+    
+    <script src="js.js" defer></script>
 
 </body>
 </html>

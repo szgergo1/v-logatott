@@ -14,3 +14,27 @@ function toggleMenu() {
   const nav = document.getElementById("myTopnav");
   nav.classList.toggle("responsive");
 }
+
+function showStatsBeforeJump(e) {
+  e.preventDefault();
+
+  document.getElementById("Játékosok").classList.remove("active");
+  document.getElementById("Statisztikák").classList.add("active");
+
+  document.getElementById("nav-Játékosok").classList.remove("active");
+  document.getElementById("nav-Statisztikák").classList.add("active");
+
+  setTimeout(() => {
+    const target = document.getElementById("szoboszlaidominik");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "center" });
+
+      target.classList.add("highlight");
+      setTimeout(() => {
+        target.classList.remove("highlight");
+      }, 1600);
+    }
+  }, 100);
+}
+
+
