@@ -15,7 +15,7 @@ function toggleMenu() {
   nav.classList.toggle("responsive");
 }
 
-function showStatsBeforeJump(e) {
+function showStatsBeforeJump(e, targetId) {
   e.preventDefault();
 
   document.getElementById("Játékosok").classList.remove("active");
@@ -25,16 +25,17 @@ function showStatsBeforeJump(e) {
   document.getElementById("nav-Statisztikák").classList.add("active");
 
   setTimeout(() => {
-    const target = document.getElementById("szoboszlaidominik");
-    if (target) {
-      target.scrollIntoView({ behavior: "smooth", block: "center" });
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "center" });
 
-      target.classList.add("highlight");
+      targetElement.classList.add("highlight");
       setTimeout(() => {
-        target.classList.remove("highlight");
-      }, 1600);
+        targetElement.classList.remove("highlight");
+      }, 2000); // hosszabb ideig tart a villanás
     }
-  }, 100);
+  }, 300); // lassabb indulás
 }
+
 
 
