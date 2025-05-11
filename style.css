@@ -55,4 +55,13 @@
       text-align: left;
     }
 }
+
+.content {
+    display: none;
+  }
+  
+  .content.active {
+    display: block;
+  }
+  
   
