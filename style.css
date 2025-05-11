@@ -32,6 +32,10 @@
     display: none;
 }
 
+#cim{
+    margin-top: 20px;
+    text-align: center;
+}
 
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {display: none;}
@@ -60,8 +64,89 @@
     display: none;
   }
   
-  .content.active {
+.content.active {
     display: block;
-  }
-  
+}
+
+.palya-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 800px;
+}
+
+#palya {
+    width: 100%;
+    height: auto;
+}
+
+.jatekos {
+    position: absolute;
+    width: 7%; /* vagy amilyen méret jól néz ki */
+}
+
+.csere {
+    display: inline-block;
+    width: 45%;  /* A két kép közötti távolságot is szabályozhatod */
+    margin-right: 5%;  /* Kisebb távolságot adunk a képek között */
+    margin-bottom: 15px; /* Továbbra is hagyunk helyet az alján */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    flex: 0 0 48%;  /* Egy oszlopban 48%-ot foglaljon el a kép */
+}
+
+/* Példák játékospozíciókra */
+#dibusz {
+    top: 70%;
+    left: 45%;
+}
+#dardai {
+    top: 45%;
+    left: 10%;
+}
+
+#orban {
+    top: 50%;
+    left: 45%;
+}
+
+#fiola {
+    top: 45%;
+    left: 80%;
+}
+#bolla {
+    top: 25%;
+    left: 80%;
+}
+#dardaibence {
+    top: 30%;
+    left: 56%;
+}
+#vecsei {
+    top: 30%;
+    left: 35%;
+}
+#kerkez {
+    top: 25%;
+    left: 10%
+}
+#szoboszlai {
+    top: 15%;
+    left: 68%;
+}
+#gazdag {
+    top: 15%;
+    left: 23%;
+}
+#varga {
+    top: 5%;
+    left: 45%;
+}
   
