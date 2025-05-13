@@ -79,7 +79,9 @@
 
 .jatekos {
     position: absolute;
-    width: 7%; /* vagy amilyen méret jól néz ki */
+    width: 7%;
+    display: block; /* A jatekos osztályú elemek blokk szintűek legyenek */
+    text-align: center; /* vagy amilyen méret jól néz ki */
 }
 
 .csere {
@@ -188,48 +190,65 @@ p{
     100% { background-color: yellow; }
   }
   
-.meccs{
-    margin: 0 auto;
-    box-sizing: border-box;
-    background-color: rgb(182, 182, 182);
-    border-radius: 16px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 40px);
-    max-width: calc(100% - 100px);
-}
-
 .meccs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.meccs {
+  background-color: rgb(182, 182, 182);
+  border-radius: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1500px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;  /* Változtatva: oszlop irányú elrendezés */
+  align-items: center;     /* Középre igazítás */
+  justify-content: center; /* Középre igazítás */
+  box-sizing: border-box;
+}
+
+.csapat {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  text-align: center;
+  width: 100%; /* Teljes szélesség */
+}
+
+.score {
+  background-color: red;
+  color: white;
+  display: flex;
+  font-size: larger;
+  padding: 7px 20px;
+  border-radius: 8px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px; /* Space between score and date */
+  width: 10%;
+}
+
+.datum {
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px; /* Space between score and date */
+}
+
+.nev {
+  text-align: center; /* A szöveget középre igazítjuk */
+  color: black;
+  text-decoration: underline white; /* Fehér aláhúzás */
+}
+
+.név{
     margin-top: 10px;
-    margin-bottom: 40px;
-  }
-  
-
-.csapat{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: x-large;
-    height: fit-content;
-}
-
-.score{
-    background-color: red;
-    color: white;
-    display: flex;
-    font-size: larger;
-    margin-left: 20px;
-    padding-top : 7px;
-    padding-right: 20px;
-    height: min-content;
-
-}
-
-.datum{
-    text-align: center;
-    margin-right: 500px;
-    padding-left: 525px;
 }
