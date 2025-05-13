@@ -143,7 +143,7 @@
     left: 23%;
 }
 #varga {
-    top: 5%;
+    top: 7%;
     left: 45%;
 }
 
@@ -159,7 +159,7 @@
     flex: 1 1 calc(33.333% - 40px);
     max-width: calc(33.333% - 40px);
     box-sizing: border-box;
-    background-color: white;
+    background-color: rgb(182, 182, 182);
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -188,4 +188,48 @@ p{
     100% { background-color: yellow; }
   }
   
+.meccs{
+    margin: 0 auto;
+    box-sizing: border-box;
+    background-color: rgb(182, 182, 182);
+    border-radius: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(100% - 100px);
+}
+
+.meccs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+  }
   
+
+.csapat{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    height: fit-content;
+}
+
+.score{
+    background-color: red;
+    color: white;
+    display: flex;
+    font-size: larger;
+    margin-left: 20px;
+    padding-top : 7px;
+    padding-right: 20px;
+    height: min-content;
+
+}
+
+.datum{
+    text-align: center;
+    margin-right: 500px;
+    padding-left: 525px;
+}
