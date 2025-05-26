@@ -7,51 +7,89 @@
 
 /* Játékospozíciók */
 #dibusz {
-    top: 20%;
-    left: -20%;
+    top: 0%;
+    left: 0%;
 }
 #dardai {
-    top: 45%;
-    left: 10%;
+    top: 0%;
+    left: 0%;
 }
 
 #orban {
-    top: 50%;
-    left: 45%;
+    top: 0%;
+    left: 0%;
 }
 
 #fiola {
-    top: 10%;
-    left: 30%;
+    top: 0%;
+    left: 0%;
 }
 #bolla {
-    top: 25%;
-    left: 80%;
+    top: 0%;
+    left: 0%;
 }
 #dardaib {
-    top: 30%;
-    left: 56%;
+    top: 0%;
+    left: 0%;
 }
 #vecsei {
-    top: 30%;
-    left: 35%;
+    top: 0%;
+    left: 0%;
 }
 #kerkez {
-    top: 25%;
-    left: 10%
+    top: 0%;
+    left: 0%
 }
 #szoboszlai {
-    top: 15%;
-    left: 68%;
+    top: 0%;
+    left: 0%;
 }
 #gazdag {
-    top: 15%;
-    left: 23%;
+    top: 0%;
+    left: 0%;
 }
 #varga {
-    top: 7%;
-    left: 45%;
+    top: 0%;
+    left: 0%;
 }
+
+.jatekos {
+    position: absolute;
+    display: block;
+}
+
+.csere {
+    display: inline-block;
+}
+
+.score {
+  display: flex;
+  font-size: larger;
+  padding: 7px 20px;
+  border-radius: 8px;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.datum {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .palya-container {
     position: relative;
@@ -61,19 +99,6 @@
     margin-bottom: 70px;
 }
 
-.jatekos {
-    position: absolute;
-    width: 7%;
-    display: block; /* A jatekos osztályú elemek blokk szintűek legyenek */
-    text-align: center; /* vagy amilyen méret jól néz ki */
-}
-
-.csere {
-    display: inline-block;
-    width: 45%;  /* A két kép közötti távolságot is szabályozhatod */
-    margin-right: 5%;  /* Kisebb távolságot adunk a képek között */
-    margin-bottom: 15px; /* Továbbra is hagyunk  az alján */
-}
 
 .row {
     display: flex;
@@ -83,17 +108,11 @@
 
 .col-6 {
     flex: 0 0 48%;  /* Egy oszlopban 48%-ot foglaljon el a kép */
-}
-
-
-
-
-  
+}  
 
 p{
     margin-left: 20px;
 }
-
   
 .meccs-container {
   display: flex;
@@ -125,27 +144,6 @@ p{
   font-size: x-large;
   text-align: center;
   width: 100%; /* Teljes szélesség */
-}
-
-.score {
-  background-color: red;
-  color: white;
-  display: flex;
-  font-size: larger;
-  padding: 7px 20px;
-  border-radius: 8px;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px; /* Space between score and date */
-  width: 10%;
-}
-
-.datum {
-  font-weight: bold;
-  width: 100%;
-  text-align: center;
-  margin-top: 10px; /* Space between score and date */
 }
 
 .nev {
