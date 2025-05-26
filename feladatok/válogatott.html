@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="javascript:void(0);" onclick="showContent('Statisztikák')" id="nav-Statisztikák">Statisztikák</a>
+        <a href="javascript:void(0);" onclick="showContent('Meccsek')" id="nav-Meccsek">Meccsek</a>
+       <a href="javascript:void(0);" class="active" onclick="showContent('Játékosok')" id="nav-Játékosok">Játékosok</a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    
+
+    <div id="Játékosok" class="content active">
+
+        <div>
+            <h1>Magyar Férfi Labdarúgás Válogatott</h1>
+        </div>
+        
+        <div class="container-fluid mt-5">
+            <div class="row justify-content-center align-items-start">
+        
+              <!-- BAL OLDAL: Stáb -->
+              <div class="col-md-2 text-center">
+                <h4>Stábtagok</h4>
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-4">
+                      <a href="#marcorossi" onclick="showStatsBeforeJump(event, 'marcorossi')">
+                        <img src="képek/Stáb/rossi.png" title="Marco Rossi" class="img-fluid rounded mb-3">
+                        <p class="nev">Marco Rossi</p>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="#cosimoinguscio" onclick="showStatsBeforeJump(event, 'cosimoinguscio')">
+                        <img src="cosimo.png" alt="Cosimo Inguscio" title="Cosimo Inguscio" class="img-fluid rounded mb-3">
+                        <p class="nev">Cosimo Inguscio</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">
+                      <a href="#szalaiadam" onclick="showStatsBeforeJump(event, 'szalaiadam')">
+                        <img src="képek/Stáb/szalai.png" alt="Szalai Ádám" title="Szalai Ádám" class="img-fluid rounded mb-3">
+                        <p class="nev">Szalai Péter</p>
+                      </a>
+                    </div>
+                    <div class="col-4">
+                      <a href="#kovesfalviistvan" onclick="showStatsBeforeJump(event, 'kövesfalviistvan')">
+                        <img src="képek/Stáb/kövesfalvi.png" alt="Kövesfalvi István" class="img-fluid rounded mb-3">
+                        <p class="nev">Kövesfalvi István</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>                  
+              </div>
+              
+        
+              <!-- KÖZÉP: Pálya és Játékosok -->
+              <div class="col-md-8 position-relative text-center palya-container">
+                <p>Kezdő csapat</p>
+
+                <img src="képek/logo.png" alt="Pálya" class="img-fluid rounded w-100">
+        
+                <!-- Játékosok a pályán -->
+                <a href="#dibuszdenes" onclick="showStatsBeforeJump(event, 'dibuszdenes')">
+                  <img src="képek/Játékosok/dibusz.png" alt="Dibusz Dénes" title="Dibusz Dénes" id="dibusz" class="jatekos">
+                </a>
+                <a href="#dardaimarton" onclick="showStatsBeforeJump(event, 'dardaimarton')">
+                  <img src="képek/Játékosok/dardai.png" alt="Dárdai Márton" title="Dárdai Márton" id="dardai" class="jatekos">
+                </a>
+                <a href="#fiolaattila" onclick="showStatsBeforeJump(event, 'fiolaattila')">
+                  <img src="képek/Játékosok/fiola.png" alt="Fiola Attila" title="Fiola Attila" id="fiola" class="jatekos">
+                </a>
+                <a href="#bollabendeguz" onclick="showStatsBeforeJump(event, 'bollabendeguz')">
+                  <img src="képek/Játékosok/bolla.png" alt="Bolla Bendegúz" title="Bolla Bendegúz" id="bolla" class="jatekos">
+                </a>
+                <a href="#vecseibalint" onclick="showStatsBeforeJump(event, 'vecseibalint')">
+                  <img src="képek/Játékosok/vecsei.png" alt="Vécsei Bálint" title="Vécsei Bálint" id="vecsei" class="jatekos">
+                </a>
+                <a href="#dardaibence" onclick="showStatsBeforeJump(event, 'dardaibence')">
+                  <img src="képek/Játékosok/dardaibence.png" alt="Dárdai Bence" title="Dárdai Bence" id="dardaib" class="jatekos">
+                </a>
+                <a href="#kerkezmilos" onclick="showStatsBeforeJump(event, 'kerkezmilos')">
+                  <img src="képek/Játékosok/kerkez.png" alt="Kerkez Milos" title="Kerkez Milos" id="kerkez" class="jatekos">
+                </a>
+                <a href="#szoboszlaidominik" onclick="showStatsBeforeJump(event, 'szoboszlaidominik')">
+                  <img src="képek/Játékosok/szoboszlai.png" alt="Szoboszlai Dominik" title="Szoboszlai Dominik" id="szoboszlai" class="jatekos">
+                </a>
+                <a href="#gazdagdaniel" onclick="showStatsBeforeJump(event, 'gazdagdaniel')">
+                  <img src="képek/Játékosok/gazdag.png" alt="Gazdag Dániel" title="Gazdag Dániel" id="gazdag" class="jatekos">
+                </a>
+                <a href="#vargabarnabas" onclick="showStatsBeforeJump(event, 'vargabarnabas')">
+                  <img src="képek/Játékosok/varga.png" alt="Varga Barnabás" title="Varga Barnabás" id="varga" class="jatekos">
+                </a>
+                <a href="#williorban" onclick="showStatsBeforeJump(event, 'williorban')">
+                  <img src="képek/Játékosok/orban.png" alt="Willi Orban" title="Willi Orban" id="orban" class="jatekos">
+                </a>
+                
+
+              </div>
+        
+              <!-- JOBB OLDAL: Cserék -->
+              <div class="col-md-2 text-center">
+                <h4>Cserék</h4>
+
+                <div class="container mt-4">
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#gulacsipeter" onclick="showStatsBeforeJump(event, 'gulacsipeter')">
+                        <img src="képek/Cserék/gulacsi.png" alt="Gulácsi Péter" title="Gulácsi Péter" id="gulacsi" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Gulácsi Péter</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#hegyikrisztian" onclick="showStatsBeforeJump(event, 'hegyikrisztian')">
+                        <img src="képek/Cserék/hegyi.png" alt="Hegyi Krisztián" title="Hegyi Krisztián" id="hegyi" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Hegyi Krisztián</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#szappanospeter" onclick="showStatsBeforeJump(event, 'szappanospeter')">
+                        <img src="képek/Cserék/szappanos.png" alt="Szappanos Péter" title="Szappanos Péter" id="szappanos" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Szappanos Péter</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#baloghbotond" onclick="showStatsBeforeJump(event, 'baloghbotond')">
+                        <img src="képek/Cserék/balogh.png" alt="Balogh Botond" title="Balogh Botond" id="balogh" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Balogh Botond</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#botkaendre" onclick="showStatsBeforeJump(event, 'botkaendre')">
+                        <img src="képek/Cserék/botka.png" alt="Botka Endre" title="Botka Endre" id="botka" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Botka Endre</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#csobothkevin" onclick="showStatsBeforeJump(event, 'csobothkevin')">
+                        <img src="képek/Cserék/csoboth.png" alt="Csoboth Kevin" title="Csoboth Kevin" id="csoboth" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Csoboth Kevin</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#nagyzsolt" onclick="showStatsBeforeJump(event, 'nagyzsolt')">
+                        <img src="képek/Cserék/nagy.png" alt="Nagy Zsolt" title="Nagy Zsolt" id="nagy" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Nagy Zsolt</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#nikitschertamas" onclick="showStatsBeforeJump(event, 'nikitschertamas')">
+                        <img src="képek/Cserék/nikitscher.png" alt="Nikitscher Tamás" title="Nikitscher Tamás" id="nikitscher" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Nikitscher Tamás</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#osvathattila" onclick="showStatsBeforeJump(event, 'osvathattila')">
+                        <img src="képek/Cserék/osvath.png" alt="Osvath Attila" title="Osvath Attila" id="osvath" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Osvath Attila</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#sallairoland" onclick="showStatsBeforeJump(event, 'sallairoland')">
+                        <img src="képek/Cserék/sallai.png" alt="Sallai Roland" title="Sallai Roland" id="sallai" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Sallai Roland</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#schaferandras" onclick="showStatsBeforeJump(event, 'schaferandras')">
+                        <img src="képek/Cserék/schafer.png" alt="Schafer András" title="Schafer András" id="schafer" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Schafer András</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#szabolevente" onclick="showStatsBeforeJump(event, 'szabolevente')">
+                        <img src="képek/Cserék/szabo.png" alt="Szabo Levente" title="Szabo Levente" id="szabo" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Szabo Levente</p>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-6">
+                      <a href="#szalaiattila" onclick="showStatsBeforeJump(event, 'szalaiattila')">
+                        <img src="képek/Cserék/szalai.png" alt="Szalai Attila" title="Szalai Attila" id="szalai" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Szalai Attila</p>
+                      </a>
+                    </div>
+                    <div class="col-6">
+                      <a href="#tothalex" onclick="showStatsBeforeJump(event, 'tothalex')">
+                        <img src="képek/Cserék/toth.png" alt="Tóth Alex" title="Tóth Alex" id="toth" class="img-fluid rounded mb-3 csere">
+                        <p class="nev">Tóth Alex</p>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                                                 
+              </div>     
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="Meccsek" class="content">
+        <h1 id="cim">Meccsek</h1>
+        <div class="meccs-container">
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>0</p>
+      <p>-</p>
+      <p>3</p>
+    </div>
+    <p class="csapat">Törökország</p>
+    <p class="datum">2025.03.23</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>1</p>
+      <p>-</p>
+      <p>3</p>
+    </div>
+    <p class="csapat">Törökország</p>
+    <p class="datum">2025.03.20</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>1</p>
+      <p>-</p>
+      <p>1</p>
+    </div>
+    <p class="csapat">Németország</p>
+    <p class="datum">2024.11.19</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>0</p>
+      <p>-</p>
+      <p>4</p>
+    </div>
+    <p class="csapat">Hollandia</p>
+    <p class="datum">2024.11.16</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>2</p>
+      <p>-</p>
+      <p>0</p>
+    </div>
+    <p class="csapat">Bosznia-Hercegovina</p>
+    <p class="datum">2024.10.14</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>1</p>
+      <p>-</p>
+      <p>1</p>
+    </div>
+    <p class="csapat">Hollandia</p>
+    <p class="datum">2024.10.11</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>0</p>
+      <p>-</p>
+      <p>0</p>
+    </div>
+    <p class="csapat">Bosznia-Hercegovina</p>
+    <p class="datum">2024.09.10</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>0</p>
+      <p>-</p>
+      <p>5</p>
+    </div>
+    <p class="csapat">Németország</p>
+    <p class="datum">2024.09.07</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>1</p>
+      <p>-</p>
+      <p>0</p>
+    </div>
+    <p class="csapat">Skócia</p>
+    <p class="datum">2024.06.23</p>
+  </div>
+
+  <div class="meccs">
+    <p class="csapat">Magyarország</p>
+    <div class="score">
+      <p>0</p>
+      <p>-</p>
+      <p>2</p>
+    </div>
+    <p class="csapat">Németország</p>
+    <p class="datum">2024.06.19</p>
+  </div>
+
+</div>
+
+    </div>
+
+
+    <div id="Statisztikák" class="content">
+      <h1 id="cim">Statisztikák</h1>
+
+      <div class="adatok-container">
+        <div class="adatok">
+          <h3 id="marcorossi">Marco Rossi</h3>
+          <p><b>Pozíció:</b> Szövetségi Kapitány</p>
+
+        </div>
+        <div class="adatok">
+          <h3 id="cosimoinguscio">Cosimo Inguscio</h3>
+          <p><b>Pozíció:</b> Másodedző</p>
+
+        </div>
+        <div class="adatok">
+          <h3 id="szalaiadam">Szalai Ádám</h3>
+          <p><b>Pozíció:</b> Pályaedző</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="kövesfalviistvan">Kövesfalvi István</h3>
+          <p><b>Pozíció:</b> Kapusedző</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="dibuszdenes">Dibusz Dénes</h3>
+          <p><b>Válogatottság:</b> 43</p>
+          <p><b>Pozíció:</b> Kapus</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 3598</p>
+          <p><b>Jelenlegi csapata:</b> Ferencváros</p>
+          <p><b>Életkor:</b> 34</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="dardaimarton">Dárdai Márton</h3>
+          <p><b>Válogatottság:</b> 13</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 934</p>
+          <p><b>Jelenlegi csapata:</b> Herta BSC</p>
+          <p><b>Életkor:</b> 23</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="fiolaattila">Fiola Attila</h3>
+          <p><b>Válogatottság:</b> 64</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 2</p>
+          <p><b>Játékperc:</b> 5042</p>
+          <p><b>Jelenlegi csapata:</b> Újpest</p>
+          <p><b>Életkor:</b> 35</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="bollabendeguz">Bolla Bendegúz</h3>
+          <p><b>Válogatottság:</b> 25</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 1404</p>
+          <p><b>Jelenlegi csapata:</b> SK Rapid</p>
+          <p><b>Életkor:</b> 25</p>
+                    
+        </div>
+        <div class="adatok">
+          <h3 id="vecseibalint">Vécsei Bálint</h3>
+          <p><b>Válogatottság:</b> 13</p>
+          <p><b>Pozíció:</b> KÖzéppályás</p>
+          <p><b>Gólok:</b> 2</p>
+          <p><b>Játékperc:</b> 472</p>
+          <p><b>Jelenlegi csapata:</b> Paks</p>
+          <p><b>Életkor:</b> 31</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="dardaibence">Dárdai Bence</h3>
+          <p><b>Válogatottság:</b> 1</p>
+          <p><b>Pozíció:</b> Középpályás</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 46</p>
+          <p><b>Jelenlegi csapata:</b> Wolfsburg</p>
+          <p><b>Életkor:</b> 19</p>       
+        </div>
+        <div class="adatok">
+          <h3 id="kerkezmilos">Kerkez Milos</h3>
+          <p><b>Válogatottság:</b> 23</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 1668</p>
+          <p><b>Jelenlegi csapata:</b> Bournemouth</p>
+          <p><b>Életkor:</b> 21</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="szoboszlaidominik">Szoboszlai Dominik</h3>
+          <p><b>Válogatottság:</b> 53</p>
+          <p><b>Pozíció:</b> Középpálya</p>
+          <p><b>Gólok:</b> 15</p>
+          <p><b>Játékperc:</b> 4405 perc</p>
+          <p><b>Jelenlegi csapata:</b> Liverpool</p>
+          <p><b>Életkor:</b> 24</p>
+          <p><b>Extra:</b> Válogatott csapatkapitánya</p>
+        </div>
+        <div class="adatok">
+          <h3 id="gazdagdaniel">Gazdag Dániel</h3>
+          <p><b>Válogatottság:</b> 29</p>
+          <p><b>Pozíció:</b> Támadó</p>
+          <p><b>Gólok:</b> 4</p>
+          <p><b>Játékperc:</b> 1149</p>
+          <p><b>Jelenlegi csapata:</b> Columbus Crew</p>
+          <p><b>Életkor:</b> 29</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="vargabarnabas">Varga Barnabás</h3>
+          <p><b>Válogatottság:</b> 22</p>
+          <p><b>Pozíció:</b> Támadó</p>
+          <p><b>Gólok:</b> 7</p>
+          <p><b>Játékperc:</b> 1572</p>
+          <p><b>Jelenlegi csapata:</b> Ferencváros</p>
+          <p><b>Életkor:</b> 30</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="williorban">Willi Orban</h3>
+          <p><b>Válogatottság:</b> 56</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 6</p>
+          <p><b>Játékperc:</b> 4851</p>
+          <p><b>Jelenlegi csapata:</b> RB Leipzig</p>
+          <p><b>Életkor:</b> 32</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="gulacsipeter">Gulácsi Péter</h3>
+          <p><b>Válogatottság:</b> 58</p>
+          <p><b>Pozíció:</b> Kapus</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 4971</p>
+          <p><b>Jelenlegi csapata:</b> RB Leipzig</p>
+          <p><b>Életkor:</b> 35</p>
+
+        </div>
+        <div class="adatok">
+          <h3 id="hegyikrisztian">Hegyi Krisztián</h3>
+          <p><b>Válogatottság:</b> 0</p>
+          <p><b>Pozíció:</b> Kapus</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 0</p>
+          <p><b>Jelenlegi csapata:</b> Motherwell FC</p>
+          <p><b>Életkor:</b> 22</p>
+
+        </div>
+        <div class="adatok">
+          <h3 id="szappanospeter">Szappanos Péter</h3>
+          <p><b>Válogatottság:</b> 1</p>
+          <p><b>Pozíció:</b> Kapus</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> -1(?)</p>
+          <p><b>Jelenlegi csapata:</b> Paks</p>
+          <p><b>Életkor:</b> 32</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="baloghbotond">Balogh Botond</h3>
+          <p><b>Válogatottság:</b> 7</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 368</p>
+          <p><b>Jelenlegi csapata:</b> Parma</p>
+          <p><b>Életkor:</b> 22</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="botkaendre">Botka Endre</h3>
+          <p><b>Válogatottság:</b> 30</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 1</p>
+          <p><b>Játékperc:</b> 1939</p>
+          <p><b>Jelenlegi csapata:</b> Kecskemét</p>
+          <p><b>Életkor:</b> 30</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="csobothkevin">Csoboth Kevin</h3>
+          <p><b>Válogatottság:</b> 17</p>
+          <p><b>Pozíció:</b> Támadó</p>
+          <p><b>Gólok:</b> 1</p>
+          <p><b>Játékperc:</b> 300</p>
+          <p><b>Jelenlegi csapata:</b> FC St. Gallen</p>
+          <p><b>Életkor:</b> 24</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="nagyzsolt">Nagy Zsolt</h3>
+          <p><b>Válogatottság:</b> 29</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 3</p>
+          <p><b>Játékperc:</b> 1820</p>
+          <p><b>Jelenlegi csapata:</b> Puskás</p>
+          <p><b>Életkor:</b> 31</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="nikitschertamas">Nikitscher Tamás</h3>
+          <p><b>Válogatottság:</b> 7</p>
+          <p><b>Pozíció:</b>  Középpályás</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 559</p>
+          <p><b>Jelenlegi csapata:</b> Kecskemét</p>
+          <p><b>Életkor:</b> 25</p>
+                    
+        </div>
+        <div class="adatok">
+          <h3 id="osvathattila">Osvath Attila</h3>
+          <p><b>Válogatottság:</b> 1</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 0</p>
+          <p><b>Jelenlegi csapata:</b> Paks</p>
+          <p><b>Életkor:</b> 29</p>
+          
+        </div>
+        <div class="adatok">
+          <h3 id="sallairoland">Sallai Roland</h3>
+          <p><b>Válogatottság:</b> 58</p>
+          <p><b>Pozíció:</b> Támadó</p>
+          <p><b>Gólok:</b> 14</p>
+          <p><b>Játékperc:</b> 4148</p>
+          <p><b>Jelenlegi csapata:</b> Galatasaray</p>
+          <p><b>Életkor:</b> 27</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="schaferandras">Schafer András</h3>
+          <p><b>Válogatottság:</b> 35</p>
+          <p><b>Pozíció:</b> Középpályás</p>
+          <p><b>Gólok:</b> 4</p>
+          <p><b>Játékperc:</b> 2620</p>
+          <p><b>Jelenlegi csapata:</b> Union Berlin</p>
+          <p><b>Életkor:</b> 26</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="szabolevente">Szabo Levente</h3>
+          <p><b>Válogatottság:</b> 2</p>
+          <p><b>Pozíció:</b> Támadó</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 50</p>
+          <p><b>Jelenlegi csapata:</b> DVTK</p>
+          <p><b>Életkor:</b> 25</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="szalaiattila">Szalai Attila</h3>
+          <p><b>Válogatottság:</b> 47</p>
+          <p><b>Pozíció:</b> Védő</p>
+          <p><b>Gólok:</b> 2</p>
+          <p><b>Játékperc:</b> 4015</p>
+          <p><b>Jelenlegi csapata:</b> Standard Liegi</p>
+          <p><b>Életkor:</b> 27</p>          
+        </div>
+        <div class="adatok">
+          <h3 id="tothalex">Tóth Alex</h3>
+          <p><b>Válogatottság:</b> 0</p>
+          <p><b>Pozíció:</b> Középpályás</p>
+          <p><b>Gólok:</b> 0</p>
+          <p><b>Játékperc:</b> 0</p>
+          <p><b>Jelenlegi csapata:</b> Ferencváros</p>
+          <p><b>Életkor:</b> 19</p>   
+      </div>
+    </div>
+    </div>
+    
+    
+    
+    <script src="js.js" defer></script>
+
+</body>
+</html>
